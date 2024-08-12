@@ -8,7 +8,7 @@ namespace AYS.Models
 {
     public class Home
     {
-        public int Id { get; set; }
+        public int HomeId { get; set; }
         public string Name { get; set; }
         public int UserId { get; set; } //Evin sahibi olan kullanıcının kimlik numarası
         public User User { get; set; } // Kullanıcı referansı

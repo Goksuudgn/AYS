@@ -2,7 +2,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-
+using AYS.Business.Abstract;
+using AYS.Business.Concrete;
 using AYS.Data;
 
 
@@ -16,11 +17,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddControllersWithViews(); // MVC yapýsýný ekler.
 
-// Register business services
-//builder.Services.AddScoped<IDeviceService, DeviceService>();
-//builder.Services.AddScoped<IHomeService, HomeService>();
-//builder.Services.AddScoped<IRoomService, RoomService>();
-//builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IDeviceService, DeviceService>();
+builder.Services.AddScoped<IHomeService, HomeService>();
+builder.Services.AddScoped<IRoomService, RoomService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build(); // Uygulamayý oluþturur.
 
@@ -40,6 +40,7 @@ app.UseStaticFiles();
 
 app.UseRouting(); // Routing iþlemlerini yapýlandýrýr.
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(  // Varsayýlan MVC route'larýný ayarlar

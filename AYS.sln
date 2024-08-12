@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AYS.Web", "AYS.Web\AYS.Web.csproj", "{AF19AC0F-1C6C-466A-BF92-AD229E9C1AA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AYS.Web", "AYS.Web\AYS.Web.csproj", "{AF19AC0F-1C6C-466A-BF92-AD229E9C1AA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AYS.Models", "AYS.Models\AYS.Models.csproj", "{D7A45422-CF96-4ADE-91F0-6FCE80DC8BE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AYS.Models", "AYS.Models\AYS.Models.csproj", "{D7A45422-CF96-4ADE-91F0-6FCE80DC8BE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AYS.Data", "AYS.Data\AYS.Data.csproj", "{1638D55B-7389-4A1A-95BB-C882364BA324}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AYS.Data", "AYS.Data\AYS.Data.csproj", "{1638D55B-7389-4A1A-95BB-C882364BA324}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AYS.Business", "AYS.Business\AYS.Business.csproj", "{3921F803-A418-4F22-B61A-845551A7A37D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AYS.Business", "AYS.Business\AYS.Business.csproj", "{3921F803-A418-4F22-B61A-845551A7A37D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AYS.Repository", "AYS.Repository\AYS.Repository.csproj", "{719EFD67-3DC0-4C75-AC08-F90322D74400}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3921F803-A418-4F22-B61A-845551A7A37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3921F803-A418-4F22-B61A-845551A7A37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3921F803-A418-4F22-B61A-845551A7A37D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719EFD67-3DC0-4C75-AC08-F90322D74400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719EFD67-3DC0-4C75-AC08-F90322D74400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719EFD67-3DC0-4C75-AC08-F90322D74400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719EFD67-3DC0-4C75-AC08-F90322D74400}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
