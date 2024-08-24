@@ -1,4 +1,5 @@
 ﻿using AYS.Data;
+using AYS.Models;
 using AYS.Repository.Shared.Abstract;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace AYS.Repository.Shared.Concrate
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : BaseModel
     {
         private readonly ApplicationDbContext _context;
         private readonly DbSet<T> _dbSet;

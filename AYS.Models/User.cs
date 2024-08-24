@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AYS.Models
 {
-    public class User 
+    public class User : BaseModel
     {
-        public int UserId { get; set; }
+        
         public string Name { get; set; }    
         public string Email { get; set; }
         public string Password { get; set; }

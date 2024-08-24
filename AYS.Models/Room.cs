@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AYS.Models
 {
-    public class Room
+    public class Room : BaseModel
     {
-        public int RoomId { get; set; }
+        
         public string Name { get; set; }
         public int HomeId { get; set; } //Odanın bulunduğu evin kimlik numarası
         public Home Home { get; set; } // Ev referasnı
