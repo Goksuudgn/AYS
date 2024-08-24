@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AYS.Models
 {
-    public class Device
+    public class Device : BaseModel
     {
-        public int DeviceId { get; set; }
+       
         public string Name { get; set; }
         public string Brand { get; set; } //Cihaz markası
         public int Consumption { get; set; } //Cihaz tüketim miktarı (watt)
