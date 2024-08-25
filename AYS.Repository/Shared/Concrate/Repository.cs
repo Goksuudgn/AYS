@@ -42,37 +42,29 @@ namespace AYS.Repository.Shared.Concrate
 			Save();
 
 		}
-
-
-
-
-
-
-
-
-		public IEnumerable<T> GetAll() => _dbSet.ToList();
-
-        public T GetById(int id) => _dbSet.Find(id);
-
-        
-
-        public void Update(T entity) => _dbSet.Update(entity);
-
-        
-
-        public void Save() => _context.SaveChanges();	
-
-		
-
+		public IEnumerable<T>GetAll()
+		{
+			return _dbSet.Where(x => !x.IsDeleted).ToList();
+		}
+		public T GetById(int id)
+		{
+			return _dbSet.Find(id);
+		}
 		public T GetFirstOrDefault(Expression<Func<T, bool>> predicate)
 		{
-			throw new NotImplementedException();
+			return _dbSet.FirstOrDefault(predicate);
+		}
+		public void Save()
+		{
+			_context.SaveChanges();
+		}
+		public T Update(T entity)
+		{
+		    _dbSet.Update(entity);
+			Save();
+			return entity;
 		}
 
-		T IRepository<T>.Update(T entity)
-		{
-			throw new NotImplementedException();
-		}
 	}
 
 	
