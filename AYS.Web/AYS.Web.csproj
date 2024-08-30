@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Category.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Core" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
@@ -21,6 +25,18 @@
     <ProjectReference Include="..\AYS.Business\AYS.Business.csproj" />
     <ProjectReference Include="..\AYS.Data\AYS.Data.csproj" />
     <ProjectReference Include="..\AYS.Models\AYS.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Category.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Category.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Category\Index.cshtml" />
   </ItemGroup>
 
 </Project>

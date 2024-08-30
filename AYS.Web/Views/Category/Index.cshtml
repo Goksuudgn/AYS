@@ -1,0 +1,42 @@
+﻿<style>
+	.deviceCategories {
+		color: #fff;
+		background-color: #f1c40f;
+		font-weight: bold;
+		border-radius: 4px;
+		
+	}
+</style>
+
+
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="deviceCategories">
+				<h4>Device Categories</h4>
+			</div>
+			<div class="deviceCategories-body">
+				<table id="tblCategories" class="table table-hovered table-striped table-bordered"></table>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	<script>
+		var DataTable="";
+
+		$(document).ready(()=>{
+			DataTable = $("#tblCategories").DataTable({
+		ajax: '/Category/GetAll',
+		columns: [
+		    {data: 'id', title: 'ID' },
+			{data:'name', title: 'Category Name'},
+			{data:'id', title:'İşlemler'}
+		]
+	});
+
+		});
+
+	</script>
+}
