@@ -17,17 +17,17 @@ namespace AYS.Web.Controllers
         {
             return View();
         }
-      
+
         public IActionResult GetAll(int categoryId) //belli kategorideki deviceları getirsin hepsini değil 
         {
-            var result = _context.Devices.Where(d=>d.CategoryId==categoryId && !d.IsDeleted);
-            return Json(new { data=result });
+            var result = _context.Devices.Where(d => d.CategoryId == categoryId && !d.IsDeleted);
+            return Json(new { data = result });
         }
         [HttpPost]
-        public IActionResult Add (Device device)
+        public IActionResult Add(Device device)
         {
             _context.Devices.Add(device);
-            _context.SaveChanges(); 
+            _context.SaveChanges();
             return Ok(device);
         }
         [HttpPost]
@@ -47,5 +47,5 @@ namespace AYS.Web.Controllers
             return Ok(device);
         }
     }
-    }
 }
+
