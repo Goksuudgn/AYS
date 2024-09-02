@@ -24,9 +24,15 @@ namespace AYS.Web.Controllers
             return Json(new { data = result });
         }
         [HttpPost]
-        public IActionResult Add(Device device)
+        public IActionResult Add(Device device, List<Category>categories)
         {
             _context.Devices.Add(device);
+            _context.SaveChanges();
+
+            foreach (var item in categories)
+            {
+                _context.Categories.Add(item);
+            }
             _context.SaveChanges();
             return Ok(device);
         }
