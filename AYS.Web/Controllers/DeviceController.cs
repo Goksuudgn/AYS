@@ -40,6 +40,14 @@ namespace AYS.Web.Controllers
             return Ok(device);
         }
         [HttpPost]
+        public IActionResult HardDelete(int id)
+        {
+            Device device = _context.Devices.Find(id);
+            _context.Devices.Remove(device);
+            _context.SaveChanges();
+            return Ok(device);
+        }
+        [HttpPost]
         public IActionResult Uptade(Device device)
         {
             _context.Devices.Update(device);
